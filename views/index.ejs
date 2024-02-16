@@ -1,18 +1,21 @@
 <%- include('./partials/head') %>
 
   <h2>Students</h2>
+  <a id="filter-button" href="/?sort=name">filter</a>
   <ul>
-    <a href="/?sort=name">filter</a>
+
     <% persons.forEach(person=> { %>
-      <li><a href="./person/<%= person.id %>">
+      <li class="cloud"><a href="./person/<%= person.id %>">
           <%= person.name %>
-        </a>, squad_id <%= person.squad_id %>
+            <%= person.prefix %>
+              <%= person.surname %>
+        </a>
       </li>
       <% }) %>
   </ul>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="cloud"></div>
-  </div>
+  </div> -->
 
   <%- include('./partials/foot') %>
