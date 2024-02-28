@@ -1,0 +1,43 @@
+<%- include('./partials/head') %>
+
+
+    <h2>FDND Squads</h2>
+    <ul>
+        <li><a href="/squad/<%= squad.id %>">Squad <%= squad.name %></a></li>
+    </ul>
+
+
+    <a class="back" href="/">Back</a>
+
+    <main>
+        <section>
+            <h1 class="squadname">Squad <%= squad.name %>
+            </h1>
+            <ul class="card-list">
+
+                <% persons.forEach(person=> { %>
+                    <li class="card-item">
+                        <a href="/person/<%= person.id %>">
+                            <div class="img-box">
+                                <img src="<%= person.avatar.includes('https') ? person.avatar : '/assets/person.png' %>"
+                                    height="200px">
+                            </div>
+                            <hr>
+                            <h2>
+                                <%= person.name + " " + person.prefix + " " + person.surname %>
+                            </h2>
+                            <p>Nickname: <%= person.nickname !="" ? person.nickname : 'Ik heb geen...' %>
+                            </p>
+                            <div class="button-row">
+                                <a class="button" href="<%= person.github_handle %>"><i class="fa-brands fa-github"></i>
+                                    Github</a>
+                            </div>
+                        </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </section>
+    </main>
+
+
+    <%- include('./partials/foot') %>

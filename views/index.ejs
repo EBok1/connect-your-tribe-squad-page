@@ -1,21 +1,15 @@
 <%- include('./partials/head') %>
 
-  <h2>Students</h2>
-  <a id="filter-button" href="/?sort=name">filter</a>
-  <ul>
+  <link rel="stylesheet" href="/style/style.css">
 
-    <% persons.forEach(person=> { %>
-      <li class="cloud"><a href="./person/<%= person.id %>">
-          <%= person.name %>
-            <%= person.prefix %>
-              <%= person.surname %>
-        </a>
-      </li>
-      <% }) %>
+  <h3>D, E, F</h3>
+
+  <ul class="container">
+    <li><a href="/squad/3" class="bubble">D</a></li>
+    <li><a href="/squad/4" class="bubble2">E</a></li>
+    <li><a href="/squad/5" class="bubble3">F</a></li>
   </ul>
 
-  <!-- <div class="container">
-    <div class="cloud"></div>
-  </div> -->
+
 
   <%- include('./partials/foot') %>

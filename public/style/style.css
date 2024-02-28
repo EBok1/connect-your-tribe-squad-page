@@ -12,43 +12,164 @@ body {
     background: #5a90ba;
 }
 
-.container {
-    position: relative;
-    height: 400px;
+
+
+
+
+
+.bubble {
+    width: 40vmin;
+    height: 40vmin;
+    background: hsl(212, 100%, 71%);
+    border: (50vmin * .09) solid hsl(212, 100%, 81%);
+    position: absolute;
+    top: calc(50% - (50vmin * .49));
+    left: calc(50% - (50vmin * .49));
+    overflow: visible;
+    border-radius: 48% 40% 62% 47% / 61% 49% 64% 43%;
+    animation: rotate 35s infinite linear(-0.45 -22.52%, 1.06 37.03%);
+    z-index: 1;
 }
 
-.cloud {
-    position: relative;
-    top: 50px;
-    width: 320px;
-    height: 100px;
-    background: #fff;
-    border-radius: 100px;
-    display: flex;
-    margin: 4em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+@keyframes rotate {
+    0% {
+        transform: rotate(1turn);
+    }
 }
 
-.cloud::before {
+.bubble:before {
     content: '';
     position: absolute;
-    z-index: -10;
-    top: -50px;
-    left: 40px;
-    width: 110px;
-    height: 110px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 90px 0 0 30px #fff;
+    top: 20vmin * .1;
+    left: 20vmin * .1;
+    margin: 2em;
+    width: calc(100% - (40vmin * .3));
+    height: calc(100% - (40vmin * .3));
+    background: hsl(212, 100%, 51%);
+    border: (40vmin * .065) solid hsl(212, 100%, 61%);
+    border-radius: 41% 40% 50% 55% / 49% 52% 51% 43%;
+    z-index: -2;
+    animation: rotateBefore 35s infinite linear;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+@keyframes rotateBefore {
+    0% {
+        transform: rotate(-2turn);
+    }
 }
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    top: 50vmin * .2;
+    left: 50vmin * .2;
+    margin: 3em;
+    width: calc(100% - (40vmin * .5));
+    height: calc(100% - (40vmin * .5));
+    background: hsl(212, 100%, 31%);
+    border: (50vmin * .05) solid hsl(212, 100%, 41%);
+    border-radius: 42% 63% 51% 60% / 47% 62% 42% 52%;
+    animation: rotateAfter 35s infinite linear;
+}
+
+@keyframes rotateAfter {
+    0% {
+        transform: rotate(2turn);
+    }
+}
+
+
+.bubble2 {
+    width: 40vmin;
+    height: 40vmin;
+    background: hsl(212, 100%, 71%);
+    border: (50vmin * .09) solid hsl(212, 100%, 81%);
+    position: absolute;
+    top: calc(50% - (50vmin * .49));
+    left: calc(15% - (50vmin * .49));
+    overflow: visible;
+    border-radius: 48% 40% 62% 47% / 61% 49% 64% 43%;
+    animation: rotate 35s infinite linear;
+    z-index: 1;
+}
+
+.bubble2:before {
+    content: '';
+    position: absolute;
+    top: 50vmin * .1;
+    left: 50vmin * .1;
+    margin: 2em;
+    width: calc(100% - (40vmin * .3));
+    height: calc(100% - (40vmin * .3));
+    background: hsl(212, 100%, 51%);
+    border: (50vmin * .065) solid hsl(212, 100%, 61%);
+    border-radius: 41% 40% 50% 55% / 49% 52% 51% 43%;
+    z-index: -2;
+    animation: rotateBefore 35s infinite linear;
+}
+
+.bubble2:after {
+    content: '';
+    position: absolute;
+    top: 50vmin * .2;
+    left: 50vmin * .2;
+    margin: 3em;
+    width: calc(100% - (40vmin * .5));
+    height: calc(100% - (40vmin * .5));
+    background: hsl(212, 100%, 31%);
+    border: (50vmin * .05) solid hsl(212, 100%, 41%);
+    border-radius: 42% 63% 51% 60% / 47% 62% 42% 52%;
+    animation: rotateAfter 35s infinite linear;
+}
+
+
+
+.bubble3 {
+    width: 40vmin;
+    height: 40vmin;
+    background: hsl(212, 100%, 71%);
+    border: (50vmin * .09) solid hsl(212, 100%, 81%);
+    position: absolute;
+    top: calc(50% - (50vmin * .49));
+    left: calc(85% - (50vmin * .49));
+    overflow: visible;
+    border-radius: 48% 40% 62% 47% / 61% 49% 64% 43%;
+    animation: rotate 35s infinite linear;
+    z-index: 1;
+}
+
+.bubble3:before {
+    content: '';
+    position: absolute;
+    top: 50vmin * .1;
+    left: 50vmin * .1;
+    margin: 2em;
+    width: calc(100% - (40vmin * .3));
+    height: calc(100% - (40vmin * .3));
+    background: hsl(212, 100%, 51%);
+    border: (50vmin * .065) solid hsl(212, 100%, 61%);
+    border-radius: 41% 40% 50% 55% / 49% 52% 51% 43%;
+    z-index: -2;
+    animation: rotateBefore 35s infinite linear;
+}
+
+.bubble3:after {
+    content: '';
+    position: absolute;
+    top: 50vmin * .2;
+    left: 50vmin * .2;
+    margin: 3em;
+    width: calc(100% - (40vmin * .5));
+    height: calc(100% - (40vmin * .5));
+    background: hsl(212, 100%, 31%);
+    border: (50vmin * .05) solid hsl(212, 100%, 41%);
+    border-radius: 42% 63% 51% 60% / 47% 62% 42% 52%;
+    animation: rotateAfter 35s infinite linear;
+}
+
+
+
+
 
 a {
     text-decoration: none;
@@ -63,12 +184,28 @@ h1 {
 
 h2 {
     color: white;
-    position: absolute;
-    top: 60px;
+}
+
+h3 {
+    margin-bottom: 30em;
+
 }
 
 #filter-button {
     position: absolute;
     top: 90px;
     color: white;
+}
+
+
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.card-item {
+    margin: 1em 1em 1em 2em;
+    padding: 1em;
 }
